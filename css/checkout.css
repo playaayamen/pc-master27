@@ -1,0 +1,52 @@
+.checkout-layout {
+    display:grid;
+    grid-template-columns:1fr 380px;
+    gap:40px;
+    margin-top:24px
+}
+
+.row-2 {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px
+}
+.radio-group {
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin:8px 0 24px
+}
+.radio-group label {flex-direction:row;
+    align-items:center;
+    gap:12px;color:#fff;
+    font-size:16px;
+    margin:0;
+    cursor:pointer
+}
+
+.radio-group input[type="radio"] {
+    width:18px;
+    height:18px;
+    min-width:18px;
+    padding:0;
+    margin:0;
+    accent-color:var(--green);
+    cursor:pointer
+}
+.order-box {background:var(--card);
+    border-radius:var(--radius);
+    padding:24px;
+    align-self:start
+}
+
+.order-box p {
+    margin:6px 0
+}
+@media(max-width:900px) {
+    .checkout-layout {
+        grid-template-columns:1fr
+    }
+    .row-2 {
+        grid-template-columns:1fr
+    }
+}

@@ -1,0 +1,287 @@
+/* Отзывы: кнопка-звёзды, модалка, список, форма, страница отзывов */
+
+/* Кнопка со звёздами в карточке каталога */
+.stars-btn {
+  display:inline-flex;align-items:center;gap:6px;
+  background:none;border:none;padding:0;margin:2px 0 6px;
+  color:#ffd800;font-size:14px;font-weight:700;cursor:pointer;
+  font-family:inherit;text-align:left;
+}
+.stars-btn span{color:var(--yellow);font-weight:400;text-decoration:none;text-underline-offset:3px}
+
+/* .stars-btn:hover span{color:var(--green)} */
+   .stars-btn:hover {
+    text-decoration: underline;
+   }
+
+/* Звёзды текстом */
+.rv-stars {
+  color:#ffd800;
+  letter-spacing:1px;
+  white-space:nowrap
+}
+.rv-stars .off {
+  color:#5a5a5a
+}
+
+/* ---------- Модальное окно ---------- */
+.rv-modal {
+  position:fixed;inset:0;z-index:100;
+  background:rgba(0,0,0,.72);
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+}
+.rv-modal[hidden] {
+  display:none
+}
+
+.rv-dialog {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  width:100%;max-width:680px;max-height:88vh;
+  overflow:auto;
+  padding:24px;
+  position:relative;
+}
+
+.rv-dialog h2 {
+  margin:0 0 4px;font-size:24px
+}
+
+.rv-sub {
+  color:var(--grey);
+  font-size:14px;
+  margin-bottom:16px
+}
+
+.rv-close {
+  position:absolute;top:12px;right:12px;
+  width:36px;height:36px;border-radius:10px;
+  background:#222;border:1px solid var(--border);color:#fff;
+  font-size:20px;line-height:1;cursor:pointer;
+}
+
+.rv-close:hover {
+  border-color:var(--green);color:var(--green)
+}
+
+/* Сводка: средний балл */
+.rv-summary {
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  background:#222;border:1px solid var(--border);border-radius:12px;
+  padding:14px 16px;margin-bottom:16px;
+}
+.rv-score {
+  font-size:34px;
+  font-weight:800;
+  color:var(--green);
+  line-height:1
+}
+
+.rv-summary small {
+  color:var(--grey);
+  display:block
+}
+
+/* Список отзывов */
+.rv-list {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-bottom:20px
+}
+
+.rv-item {
+  background:#222;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px 16px;
+}
+
+.rv-item-head {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:6px
+}
+
+.rv-item-head b {
+  font-size:15px
+}
+
+.rv-item-head time {
+  color:var(--grey2);
+  font-size:12px;
+  margin-left:auto
+}
+
+.rv-item p {
+  color:#ddd;
+  font-size:15px;
+  margin:0;
+  white-space:pre-wrap;
+  overflow-wrap:anywhere
+}
+
+.rv-empty,.rv-loading {
+  color:var(--grey);
+  text-align:center;
+  padding:20px 0;
+  font-size:15px
+}
+
+/* ---------- Форма отзыва ---------- */
+.rv-form {
+  background:#222;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:16px
+}
+
+.rv-form h3 {
+  margin:0 0 12px;
+  font-size:17px
+}
+
+.rv-form .row-2 {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px
+}
+
+.rv-form label {
+  margin-bottom:12px
+}
+
+.rv-form input,.rv-form textarea,.rv-form select {
+  padding:11px 12px
+}
+
+.rv-form textarea {
+  resize:vertical;
+  min-height:90px
+}
+
+.rv-form .btn {
+  margin-top:4px
+}
+
+/* Выбор оценки звёздами */
+.rv-rate {
+  display:flex;
+  gap:4px;
+  flex-direction:row;
+  align-items:center;
+  margin:0 0 12px
+}
+
+.rv-rate label {
+  flex-direction:row;
+  margin:0;
+  cursor:pointer;
+  font-size:26px;
+  line-height:1;
+  color:#5a5a5a;
+  transition:transform .1s;
+}
+
+.rv-rate label:hover {
+  transform:scale(1.12)
+}
+
+.rv-rate input {
+  position:absolute;
+  opacity:0;
+  width:0;
+  height:0
+}
+
+.rv-rate label:hover,.rv-rate label.active {
+  color:#ffd800
+}
+
+.rv-rate input:focus-visible + span {
+  outline:2px solid var(--green);
+  border-radius:4px
+}
+
+.rv-msg {
+  margin-top:10px;
+  font-size:14px
+}
+
+/* Блок отзывов на странице товара */
+.reviews-section {
+  margin-top:56px;
+  max-width:900px
+}
+
+.reviews-section > h2 {
+  margin-top:0
+}
+
+.reviews-section .rv-list {
+  margin-top:16px
+}
+
+/* ---------- Страница reviews.html ---------- */.rv-page-head{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.rv-page-head h1 {
+  margin:0
+}
+
+.rv-toolbar {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:14px 16px;
+  margin:18px 0 24px;
+}
+
+.rv-toolbar label {
+  flex-direction:row;
+  align-items:center;
+  gap:8px;
+  margin:0;
+  white-space:nowrap
+}
+
+.rv-toolbar select {
+  width:auto;
+  min-width:180px;
+  padding:9px 12px
+}
+
+.rv-toolbar .spacer {
+  flex:1
+}
+
+.rv-grid {
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:28px;
+  align-items:start
+}
+
+.rv-grid .rv-form {
+  position:sticky;
+  top:92px
+}
+
+.rv-more {
+  display:flex;
+  justify-content:center;
+  margin:18px 0 40px
+}
+
+@media(max-width:900px) {
+  .rv-grid{grid-template-columns:1fr}
+  .rv-grid .rv-form{position:static;order:-1}
+  .rv-form .row-2{grid-template-columns:1fr}
+  .rv-dialog{padding:18px}
+  .rv-toolbar select{min-width:140px}
+}
