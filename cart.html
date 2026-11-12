@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Корзина — ПК-МАСТЕР</title>
+<link rel="stylesheet" href="css/common.css?v=3">
+<link rel="stylesheet" href="css/cart.css?v=3">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span>
+    </a>
+    <div class="header-contacts">
+      <a href="tel:+79314196799">+7 (931) 419 67 99</a>
+      <a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="catalog.html">Каталог</a>
+      <a href="configurator.html">Конфигуратор</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="login.html" id="authLink">Вход</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Поиск">🔍</button>
+      <a href="cart.html" class="icon-btn cart-link" aria-label="Корзина">🛒<span class="badge" id="cartBadge">0</span></a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <p class="breadcrumbs"><a href="index.html">Главная</a> › <span>Корзина</span></p>
+  <h1>Корзина</h1>
+
+  <div class="cart-table-head">
+    <span>Товар</span>
+    <span>Цена</span>
+    <span>Количество</span>
+    <span>Сумма</span>
+  </div>
+
+  <div id="cartItems" class="cart-list">
+    <p style="padding:20px 0;color:var(--grey)">Загрузка корзины…</p>
+  </div>
+
+  <div class="cart-bottom">
+    <div class="promo-wrap">
+      <div class="promo">
+        <input id="promoInput" placeholder="Промокод" autocomplete="off">
+        <button class="btn btn-primary" id="promoBtn" type="button">Применить</button>
+      </div>
+      <p class="small" id="promoMsg" style="margin-top:8px"></p>
+    </div>
+
+    <div class="total-box">
+      <p>Итого: <span id="cartCount">0 товаров</span> на сумму</p>
+      <p class="small" id="cartSubtotalRow" hidden>Сумма: <span id="cartSubtotal">0 ₽</span></p>
+      <p class="small" id="cartDiscountRow" hidden style="color:#ffb347">Скидка (<span id="cartPromoLabel"></span>): −<span id="cartDiscount">0 ₽</span></p>
+      <div class="price big" id="cartTotal">0 ₽</div>
+      <a href="checkout.html" class="btn btn-primary">Оформить заказ</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div>
+      <a href="index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span></a>
+      <p>© 2026 ООО «ПК-Мастер»<br>Все права не защищены.</p>
+    </div>
+    <div><h4>Информация</h4><a href="#">Доставка и оплата</a><a href="#">Гарантия</a><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+    <div><h4>Контакты</h4><a href="tel:+79314196799">+7 (931) 419 67 99</a><a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a><span>Кызыл</span><span>Telegram | YouTube</span></div>
+  </div>
+</footer>
+<script src="js/main.js?v=3"></script>
+<script src="js/cart.js?v=3"></script>
+<script src="js/auth.js?v=3"></script>
+<script>
+// Страховка: если cart.js не загрузился (кэш, 404, ошибка синтаксиса) — видно на странице.
+window.addEventListener('load', function () {
+  var box = document.getElementById('cartItems');
+  if (!window.PCCart && box) {
+    box.innerHTML = '<div style="padding:24px;color:#ff6b6b;font-size:16px">' +
+      'Скрипт корзины не загрузился (<b>js/cart.js</b>).<br>' +
+      'Нажмите Ctrl+F5 (жёсткое обновление) и проверьте, что сайт открыт по адресу http://localhost:..., а не file:///</div>';
+  }
+});
+</script>
+</body>
+</html>

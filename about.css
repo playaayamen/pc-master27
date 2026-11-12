@@ -1,0 +1,35 @@
+.about-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+    margin-top:24px
+}
+
+.about-grid p {
+    color:var(--grey);
+    margin-bottom:16px;
+    font-size:18px
+}
+
+.about-grid p b {
+    color:#fff
+}
+
+.about-img {
+    background:var(--card);
+    border-radius:var(--radius);
+    display:grid;
+    place-items:center;
+    font-size:72px;
+    min-height:280px
+}
+.requisites p {
+    font-size:18px;
+    line-height:1.8
+}
+
+@media (max-width:900px) {
+    .about-grid {
+        grid-template-columns:1fr
+    }
+}

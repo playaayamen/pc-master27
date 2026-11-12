@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Оформление заказа — ПК-МАСТЕР</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/checkout.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span>
+    </a>
+    <div class="header-contacts">
+      <a href="tel:+79314196799">+7 (931) 419 67 99</a>
+      <a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="catalog.html">Каталог</a>
+      <a href="configurator.html">Конфигуратор</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="login.html" id="authLink">Вход</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Поиск">🔍</button>
+      <a href="cart.html" class="icon-btn cart-link" aria-label="Корзина">🛒<span class="badge" id="cartBadge">0</span></a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <p class="breadcrumbs"><a href="index.html">Главная</a> › <a href="catalog.html">Каталог</a> › <span>Оформление заказа</span></p>
+  <h1>Оформление заказа</h1>
+  <div class="checkout-layout">
+    <form class="checkout-form" id="checkoutForm" novalidate>
+    <h2>Контактные данные</h2>
+    <div class="row-2"><label>Имя *<input name="firstName" value="Иван" required></label><label>Фамилия *<input name="lastName" value="Иванов" required></label></div>
+    <label>Телефон *<input name="phone" value="+7 (___) ___-__-__" required></label>
+    <label>E-mail *<input type="email" name="email" value="ivanov@mail.ru" required></label>
+    <h2>Доставка</h2>
+    <label>Адрес доставки *<input name="address" value="г. Кызыл" required></label>
+    <label>Способ доставки<select><option>Самовывоз из магазина</option><option>Курьер по городу</option><option>Транспортная компания</option></select></label>
+    <h2>Оплата</h2>
+    <div class="radio-group">
+    <label><input type="radio" name="pay" checked> Картой онлайн</label>
+    <label><input type="radio" name="pay"> При получении</label>
+    <label><input type="radio" name="pay"> По счёту</label>
+    </div>
+    <button class="btn btn-primary btn-full" type="submit">Подтвердить заказ</button>
+    <p class="error" id="formError"></p>
+    <p class="success" id="formSuccess" hidden>✅ Заказ оформлен! Мы свяжемся с вами в ближайшее время.</p>
+    </form>
+    <aside class="order-box">
+    <h3>Ваш заказ</h3>
+    <p>ПК "Fury X" × 1</p><p>149 990 ₽</p>
+    <p>RTX 4070 Ti × 1</p><p>79 990 ₽</p>
+    <p>Доставка 350 ₽</p>
+    <div class="price big">230 330 ₽</div>
+    <p class="small">Нажимая «Подтвердить заказ», вы соглашаетесь с условиями продажи и политикой конфиденциальности.</p>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div>
+      <a href="index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span></a>
+      <p>© 2026 ООО «ПК-Мастер»<br>Все права не защищены.</p>
+    </div>
+    <div><h4>Информация</h4><a href="#">Доставка и оплата</a><a href="#">Гарантия</a><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+    <div><h4>Контакты</h4><a href="tel:+79314196799">+7 (931) 419 67 99</a><a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a><span>Кызыл</span><span>Telegram | YouTube</span></div>
+  </div>
+</footer>
+<script src="js/main.js?v=3"></script>
+<script src="js/forms.js?v=3"></script>
+<script src="js/auth.js?v=3"></script>
+</body>
+</html>

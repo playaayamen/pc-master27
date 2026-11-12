@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Товар — ПК-МАСТЕР</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/product.css">
+<link rel="stylesheet" href="css/reviews.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span>
+    </a>
+    <div class="header-contacts">
+      <a href="tel:+79314196799">+7 (931) 419 67 99</a>
+      <a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="catalog.html">Каталог</a>
+      <a href="configurator.html">Конфигуратор</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="login.html" id="authLink">Вход</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Поиск">🔍</button>
+      <a href="cart.html" class="icon-btn cart-link" aria-label="Корзина">🛒<span class="badge" id="cartBadge">0</span></a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <p class="breadcrumbs"><a href="index.html">Главная</a> › <a href="catalog.html">Каталог</a> › <span id="crumbName">Товар</span></p>
+
+  <div id="productLoading" style="padding:30px 0;color:var(--grey)">Загрузка товара…</div>
+  <div id="productError" style="padding:30px 0;color:#ff6b6b" hidden></div>
+
+  <div id="productContent" hidden>
+    <div class="product-layout">
+      <div class="product-img"><img id="productImage" src="" alt=""></div>
+      <div class="product-info">
+        <h1 id="productTitle"></h1>
+        <button class="stars-btn" type="button" id="productReviewsBtn" data-review-slug="" data-review-name="">★★★★★ <span>Отзывы</span></button>
+        <div class="price big" id="productPrice"></div>
+        <p id="productStock" style="margin:8px 0;font-weight:600"></p>
+        <p class="desc" id="productDesc"></p>
+
+        <div class="qty-row">
+          <b>Количество:</b>
+          <button class="qty-btn" id="minus" type="button">–</button>
+          <span id="qty">1</span>
+          <button class="qty-btn" id="plus" type="button">+</button>
+          <small id="qtyHint" style="margin-left:8px;color:var(--grey)"></small>
+        </div>
+
+        <div class="hero-btns">
+          <button class="btn btn-primary" id="addToCartBtn" type="button">В корзину</button>
+          <a href="configurator.html" class="btn btn-outline">Собрать свой</a>
+        </div>
+
+        <table class="specs" id="specsTable"></table>
+      </div>
+    </div>
+
+    <section class="reviews-section" id="productReviews" data-review-slug="" data-review-name=""></section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div>
+      <a href="index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span></a>
+      <p>© 2026 ООО «ПК-Мастер»<br>Все права не защищены.</p>
+    </div>
+    <div><h4>Информация</h4><a href="#">Доставка и оплата</a><a href="#">Гарантия</a><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+    <div><h4>Контакты</h4><a href="tel:+79314196799">+7 (931) 419 67 99</a><a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a><span>Кызыл</span><span>Telegram | YouTube</span></div>
+  </div>
+</footer>
+<script src="js/main.js?v=3"></script>
+<script src="js/product.js?v=3"></script>
+<script src="js/reviews.js?v=3"></script>
+<script src="js/auth.js?v=3"></script>
+</body>
+</html>

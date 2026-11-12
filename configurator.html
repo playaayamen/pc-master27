@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конфигуратор — ПК-МАСТЕР</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/configurator.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span>
+    </a>
+    <div class="header-contacts">
+      <a href="tel:+79314196799">+7 (931) 419 67 99</a>
+      <a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="catalog.html">Каталог</a>
+      <a href="configurator.html">Конфигуратор</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="login.html" id="authLink">Вход</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Поиск">🔍</button>
+      <a href="cart.html" class="icon-btn cart-link" aria-label="Корзина">🛒<span class="badge" id="cartBadge">0</span></a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <p class="breadcrumbs"><a href="index.html">Главная</a> › <span>Конфигуратор</span></p>
+  <h1>Собери свой ПК</h1>
+  <p class="subtitle">Выберите комплектующие — система проверит совместимость</p>
+  <div class="cfg-layout">
+    <div class="cfg-left">
+      <section class="cfg-group">
+        <h2>1. Процессор</h2>
+        <div class="options">
+          <button class="opt selected" data-price="52500" data-cat="cpu" data-name="Ryzen 7 7800X3D">Ryzen 7 7800X3D<small>52 500 ₽</small></button>
+          <button class="opt" data-price="68900" data-cat="cpu" data-name="Ryzen 9 7900X">Ryzen 9 7900X<small>68 900 ₽</small></button>
+          <button class="opt" data-price="58200" data-cat="cpu" data-name="Intel i7-14700K">Intel i7-14700K<small>58 200 ₽</small></button>
+        </div>
+      </section>
+      <section class="cfg-group">
+        <h2>2. Видеокарта</h2>
+        <div class="options">
+          <button class="opt selected" data-price="79990" data-cat="gpu" data-name="RTX 4070 Ti 12GB">RTX 4070 Ti 12GB<small>79 990 ₽</small></button>
+          <button class="opt" data-price="119990" data-cat="gpu" data-name="RTX 4080 16GB">RTX 4080 16GB<small>119 990 ₽</small></button>
+          <button class="opt" data-price="189990" data-cat="gpu" data-name="RTX 4090 24GB">RTX 4090 24GB<small>189 990 ₽</small></button>
+        </div>
+      </section>
+      <section class="cfg-group">
+        <h2>3. Материнская плата</h2>
+        <div class="options">
+          <button class="opt selected" data-price="18500" data-cat="mb" data-name="ASUS B650-Plus">ASUS B650-Plus<small>18 500 ₽</small></button>
+          <button class="opt" data-price="32900" data-cat="mb" data-name="MSI X670E">MSI X670E<small>32 900 ₽</small></button>
+          <button class="opt" data-price="26800" data-cat="mb" data-name="Gigabyte Z790">Gigabyte Z790<small>26 800 ₽</small></button>
+        </div>
+       </section>
+      <section class="cfg-group">
+          <h2>4. Оперативная память</h2>
+          <div class="options">
+            <button class="opt selected" data-price="15500" data-cat="ram" data-name="DDR5 32GB">DDR5 32GB<small>15 500 ₽</small></button>
+            <button class="opt" data-price="32500" data-cat="ram" data-name="DDR5 64GB">DDR5 64GB<small>32 500 ₽</small></button>
+            <button class="opt" data-price="65200" data-cat="ram" data-name="DDR5 128GB">DDR5 128GB<small>65 200 ₽</small></button>
+          </div>
+      </section>
+    </div>
+  <aside class="cfg-summary" id="summary">
+    <h3>🧾 Ваша сборка</h3>
+    <div class="sum-row"><span>Процессор</span><span id="sumCpu">52 500 ₽</span></div>
+    <div class="sum-row"><span>Видеокарта</span><span id="sumGpu">79 990 ₽</span></div>
+    <div class="sum-row"><span>Мат. плата</span><span id="sumMb">18 500 ₽</span></div>
+    <div class="sum-row"><span>ОЗУ</span><span id="sumRam">15 500 ₽</span></div>
+    <div class="sum-row"><span>Накопитель</span><span>13 200 ₽</span></div>
+    <div class="sum-row"><span>Сборка и тест</span><span>3 500 ₽</span></div>
+    <div class="sum-total" id="sumTotal">183 190 ₽</div>
+    <button class="btn btn-primary btn-full" data-add="Сборка ПК">Заказать сборку</button>
+    <p class="ok">✅ Все компоненты совместимы</p>
+  </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div>
+      <a href="index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span></a>
+      <p>© 2026 ООО «ПК-Мастер»<br>Все права не защищены.</p>
+    </div>
+    <div><h4>Информация</h4><a href="#">Доставка и оплата</a><a href="#">Гарантия</a><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+    <div><h4>Контакты</h4><a href="tel:+79314196799">+7 (931) 419 67 99</a><a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a><span>Кызыл</span><span>Telegram | YouTube</span></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/configurator.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

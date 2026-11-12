@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ПК-МАСТЕР — Собери свой идеальный ПК</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/reviews.css">
+</head>
+<body>
+  
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span>
+    </a>
+    <div class="header-contacts">
+      <a href="tel:+79314196799">+7 (931) 419 67 99</a>
+      <a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="catalog.html">Каталог</a>
+      <a href="configurator.html">Конфигуратор</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="login.html" id="authLink">Вход</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Поиск">🔍</button>
+      <a href="cart.html" class="icon-btn cart-link" aria-label="Корзина">🛒<span class="badge" id="cartBadge">0</span></a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Собери свой идеальный ПК</h1>
+      <p>Готовые сборки и комплектующие с гарантией и тестированием. Индивидуальный подбор под любые задачи.</p>
+      <div class="hero-btns">
+        <a href="configurator.html" class="btn btn-primary">В конфигуратор</a>
+        <a href="catalog.html" class="btn btn-outline">Заказать ПК</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/pcmain.png" alt="Игровой ПК">
+    </div>
+  </section>
+
+  <section id="hits" class="section">
+    <h2>Хиты продаж</h2>
+    <div class="grid grid-4">
+      <article class="card">
+        <img src="img/pc1.png" alt="">
+        <h3>Игровой ПК “Fury X”</h3>
+        <button class="stars-btn" type="button" data-review-slug="fury-x" data-review-name="Игровой ПК “Fury X”">★★★★★ <span>Отзывы</span></button>
+        <div class="price">1 349 990 ₽</div>
+        <button class="btn btn-primary btn-full" data-add="Игровой ПК Fury X" data-product-slug="fury-x">В корзину</button>
+      </article>
+      <article class="card">
+        <img src="img/pc2.png" alt="">
+        <h3>RTX 5090 ROG Matrix</h3>
+        <button class="stars-btn" type="button" data-review-slug="rtx-5090-rog-matrix" data-review-name="RTX 5090 ROG Matrix">★★★★★ <span>Отзывы</span></button>
+        <div class="price">800 990 ₽</div>
+        <button class="btn btn-primary btn-full" data-add="RTX 5090 ROG Matrix" data-product-slug="rtx-5090-rog-matrix">В корзину</button>
+      </article>
+      <article class="card">
+        <img src="img/pc3.png" alt="">
+        <h3>Ryzen 9 9950X3D</h3>
+        <button class="stars-btn" type="button" data-review-slug="ryzen-9-9950x3d" data-review-name="Ryzen 9 9950X3D">★★★★★ <span>Отзывы</span></button>
+        <div class="price">63 990 ₽</div>
+        <button class="btn btn-primary btn-full" data-add="Ryzen 9 9950X3D" data-product-slug="ryzen-9-9950x3d">В корзину</button>
+      </article>
+      <article class="card">
+        <img src="img/pc4.png" alt="">
+        <h3>Corsair 32GB DDR5</h3>
+        <button class="stars-btn" type="button" data-review-slug="corsair-32gb-ddr5" data-review-name="Corsair 32GB DDR5">★★★★★ <span>Отзывы</span></button>
+        <div class="price">90 990 ₽</div>
+        <button class="btn btn-primary btn-full" data-add="Corsair 32GB DDR5" data-product-slug="corsair-32gb-ddr5">В корзину</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Новинки</h2>
+    <div class="grid grid-4">
+      <article class="card">
+        <img src="img/pc5.png" alt="">
+        <h3>AMD RX 9060 XT</h3>
+        <button class="stars-btn" type="button" data-review-slug="amd-rx-9060-xt" data-review-name="AMD RX 9060 XT">★★★★★ <span>Отзывы</span></button>
+        <div class="price">68 990 ₽</div>
+        <button class="btn btn-primary btn-full" data-add="AMD RX 9060 XT" data-product-slug="amd-rx-9060-xt">В корзину</button>
+      </article>
+      <article class="card">
+        <img src="img/pc6.png" alt="">
+        <h3>TRIDENT Z5 DDR5</h3>
+        <button class="stars-btn" type="button" data-review-slug="trident-z5-ddr5" data-review-name="TRIDENT Z5 DDR5">★★★★★ <span>Отзывы</span></button>
+        <div class="price">24 990 ₽</div>
+        <button class="btn btn-primary btn-full" data-add="TRIDENT Z5 DDR5" data-product-slug="trident-z5-ddr5">В корзину</button>
+      </article>
+      <article class="card">
+        <img src="img/pc7.png" alt="">
+        <h3>INTEL ULTRA 9 285K</h3>
+        <button class="stars-btn" type="button" data-review-slug="intel-ultra-9-285k" data-review-name="INTEL ULTRA 9 285K">★★★★★ <span>Отзывы</span></button>
+        <div class="price">58 990 ₽</div>
+        <button class="btn btn-primary btn-full" data-add="INTEL ULTRA 9 285K" data-product-slug="intel-ultra-9-285k">В корзину</button>
+      </article>
+      <article class="card">
+        <img src="img/pc8.png" alt="">
+        <h3>ASUS ROG 1000W</h3>
+        <button class="stars-btn" type="button" data-review-slug="asus-rog-1000w" data-review-name="ASUS ROG 1000W">★★★★★ <span>Отзывы</span></button>
+        <div class="price">73 990 ₽</div>
+        <button class="btn btn-primary btn-full" data-add="ASUS ROG 1000W" data-product-slug="asus-rog-1000w">В корзину</button>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Почему выбирают нас</h2>
+    <div class="grid grid-3 features">
+      <div class="feature"><div class="f-icon">🛡️</div><h3>Гарантия 3 года</h3><p>На все готовые сборки и комплектующие</p></div>
+      <div class="feature"><div class="f-icon">🔧</div><h3>Тестирование</h3><p>Каждый ПК проходит стресс-тест перед отправкой</p></div>
+      <div class="feature"><div class="f-icon">🚚</div><h3>Быстрая доставка</h3><p>По городу в день заказа, по области — 1–2 дня</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div>
+      <a href="index.html" class="logo"><span class="logo-iconf">⚡</span><span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span></a>
+      <p>© 2026 ООО «ПК-Мастер»<br>Все права не защищены.</p>
+    </div>
+    <div><h4>Информация</h4><a href="#">Доставка и оплата</a><a href="#">Гарантия</a><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+    <div><h4>Контакты</h4><a href="tel:+79314196799">+7 (931) 419 67 99</a><a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a><span>Кызыл</span><span>Telegram | YouTube</span></div>
+  </div>
+</footer>
+<script src="js/main.js?v=3"></script>
+<script src="js/reviews.js?v=3"></script>
+<script src="js/auth.js?v=3"></script>
+</body>
+</html>

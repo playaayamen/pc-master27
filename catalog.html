@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог — ПК-МАСТЕР</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/catalog.css">
+  <link rel="stylesheet" href="css/reviews.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span>
+      </a>
+      <div class="header-contacts">
+        <a href="tel:+79314196799">+7 (931) 419 67 99</a>
+        <a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a>
+      </div>
+      <nav class="main-nav" id="mainNav">
+        <a href="catalog.html" class="active">Каталог</a>
+        <a href="configurator.html">Конфигуратор</a>
+        <a href="reviews.html">Отзывы</a>
+        <a href="about.html">О компании</a>
+        <a href="contacts.html">Контакты</a>
+        <a href="login.html" id="authLink">Вход</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" aria-label="Поиск">🔍</button>
+        <a href="cart.html" class="icon-btn cart-link" aria-label="Корзина">🛒<span class="badge" id="cartBadge">0</span></a>
+        <button class="burger" id="burger" aria-label="Меню">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <p class="breadcrumbs"><a href="index.html">Главная</a> › <span>Каталог</span></p>
+    <h1>Каталог</h1>
+
+    <div class="catalog-layout">
+
+      <aside class="filters">
+        <h3>Фильтры</h3>
+        <label>Категория
+          <select id="filterCategory">
+            <option value="all">Все товары</option>
+            <option value="builds">Сборки</option>
+            <option value="gpu">Видеокарты</option>
+            <option value="cpu">Процессоры</option>
+            <option value="cases">Корпуса</option>
+          </select>
+        </label>
+        <label>Производитель
+          <select id="filterBrand">
+            <option value="all">Все</option>
+            <option value="asus">ASUS</option>
+            <option value="msi">MSI</option>
+            <option value="amd">AMD</option>
+            <option value="nvidia">NVIDIA</option>
+            <option value="deepcool">DeepCool</option>
+          </select>
+        </label>
+        <label>Цена, от (₽)<input type="number" id="priceFrom" value="0" min="0"></label>
+        <label>Цена, до (₽)<input type="number" id="priceTo" value="500000" min="0"></label>
+        <button class="btn btn-primary btn-full" id="applyFilters">Применить</button>
+        <button class="btn btn-outline btn-full" id="resetFilters">Сбросить</button>
+      </aside>
+
+      <section class="catalog-main">
+        <div class="catalog-head">
+          <span id="resultsCount">Найдено: 12 товаров</span>
+          <select id="sortSelect">
+            <option value="popular">По популярности</option>
+            <option value="price-asc">Сначала дешевле</option>
+            <option value="price-desc">Сначала дороже</option>
+          </select>
+        </div>
+
+        <div class="grid grid-4" id="productGrid">
+          <article class="card" data-category="builds" data-brand="asus" data-price="449990" data-rating="4.9">
+            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=80" alt="Игровой ПК Tragg">
+            <h3>Игровой ПК “Tragg”</h3>
+            <button class="stars-btn" type="button" data-review-slug="tragg" data-review-name="Игровой ПК “Tragg”">★★★★★ <span>Отзывы</span></button>
+            <div class="price">449 990 ₽</div>
+            <a href="product.html?slug=tragg" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="gpu" data-brand="nvidia" data-price="79990" data-rating="4.9">
+            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&q=80" alt="RTX 4070 Ti 12GB">
+            <h3>RTX 4070 Ti 12GB</h3>
+            <button class="stars-btn" type="button" data-review-slug="rtx-4070-ti-12gb" data-review-name="RTX 4070 Ti 12GB">★★★★★ <span>Отзывы</span></button>
+            <div class="price">79 990 ₽</div>
+            <a href="product.html?slug=rtx-4070-ti-12gb" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="cpu" data-brand="amd" data-price="52500" data-rating="4.9">
+            <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=600&q=80" alt="Ryzen 7 7800X3D">
+            <h3>Ryzen 7 7800X3D</h3>
+            <button class="stars-btn" type="button" data-review-slug="ryzen-7-7800x3d" data-review-name="Ryzen 7 7800X3D">★★★★★ <span>Отзывы</span></button>
+            <div class="price">52 500 ₽</div>
+            <a href="product.html?slug=ryzen-7-7800x3d" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="cases" data-brand="deepcool" data-price="8200" data-rating="4.9">
+            <img src="https://images.unsplash.com/photo-1587302912306-cf1ed9c33146?w=600&q=80" alt="Корпус DeepCool CH560">
+            <h3>Корпус DeepCool CH560</h3>
+            <button class="stars-btn" type="button" data-review-slug="deepcool-ch560" data-review-name="Корпус DeepCool CH560">★★★★★ <span>Отзывы</span></button>
+            <div class="price">8 200 ₽</div>
+            <a href="product.html?slug=deepcool-ch560" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="builds" data-brand="msi" data-price="389990" data-rating="4.8">
+            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=80" alt="Игровой ПК Vector">
+            <h3>Игровой ПК “Vector”</h3>
+            <button class="stars-btn" type="button" data-review-slug="игровой-пк-vector" data-review-name="Игровой ПК “Vector”">★★★★★ <span>Отзывы</span></button>
+            <div class="price">389 990 ₽</div>
+            <a href="product.html" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="gpu" data-brand="msi" data-price="74990" data-rating="4.8">
+            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&q=80" alt="MSI RTX 4070 SUPER 12GB">
+            <h3>MSI RTX 4070 SUPER 12GB</h3>
+            <button class="stars-btn" type="button" data-review-slug="msi-rtx-4070-super-12gb" data-review-name="MSI RTX 4070 SUPER 12GB">★★★★★ <span>Отзывы</span></button>
+            <div class="price">74 990 ₽</div>
+            <a href="product.html" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="cpu" data-brand="amd" data-price="42990" data-rating="4.7">
+            <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=600&q=80" alt="Ryzen 9 7900X">
+            <h3>Ryzen 9 7900X</h3>
+            <button class="stars-btn" type="button" data-review-slug="ryzen-9-7900x" data-review-name="Ryzen 9 7900X">★★★★☆ <span>Отзывы</span></button>
+            <div class="price">42 990 ₽</div>
+            <a href="product.html" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="cases" data-brand="msi" data-price="9490" data-rating="4.7">
+            <img src="https://images.unsplash.com/photo-1587302912306-cf1ed9c33146?w=600&q=80" alt="Корпус MSI MAG Forge 100R">
+            <h3>Корпус MSI MAG Forge 100R</h3>
+            <button class="stars-btn" type="button" data-review-slug="корпус-msi-mag-forge-100r" data-review-name="Корпус MSI MAG Forge 100R">★★★★☆ <span>Отзывы</span></button>
+            <div class="price">9 490 ₽</div>
+            <a href="product.html" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="builds" data-brand="amd" data-price="299990" data-rating="4.6">
+            <img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=600&q=80" alt="Игровой ПК Core Lite">
+            <h3>Игровой ПК “Core Lite”</h3>
+            <button class="stars-btn" type="button" data-review-slug="игровой-пк-core-lite" data-review-name="Игровой ПК “Core Lite”">★★★★☆ <span>Отзывы</span></button>
+            <div class="price">299 990 ₽</div>
+            <a href="product.html" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="gpu" data-brand="asus" data-price="69990" data-rating="4.8">
+            <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?w=600&q=80" alt="ASUS Dual RX 7800 XT">
+            <h3>ASUS Dual RX 7800 XT</h3>
+            <button class="stars-btn" type="button" data-review-slug="asus-dual-rx-7800-xt" data-review-name="ASUS Dual RX 7800 XT">★★★★★ <span>Отзывы</span></button>
+            <div class="price">69 990 ₽</div>
+            <a href="product.html" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="cpu" data-brand="amd" data-price="24990" data-rating="4.6">
+            <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?w=600&q=80" alt="Ryzen 5 7600X">
+            <h3>Ryzen 5 7600X</h3>
+            <button class="stars-btn" type="button" data-review-slug="ryzen-5-7600x" data-review-name="Ryzen 5 7600X">★★★★☆ <span>Отзывы</span></button>
+            <div class="price">24 990 ₽</div>
+            <a href="product.html" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+
+          <article class="card" data-category="cases" data-brand="asus" data-price="29990" data-rating="4.9">
+            <img src="https://images.unsplash.com/photo-1587302912306-cf1ed9c33146?w=600&q=80" alt="Корпус ASUS ROG Strix Helios">
+            <h3>Корпус ASUS ROG Strix Helios</h3>
+            <button class="stars-btn" type="button" data-review-slug="корпус-asus-rog-strix-helios" data-review-name="Корпус ASUS ROG Strix Helios">★★★★★ <span>Отзывы</span></button>
+            <div class="price">29 990 ₽</div>
+            <a href="product.html" class="btn btn-primary btn-full">Подробнее</a>
+          </article>
+        </div>
+
+        <p class="small" id="emptyResults" hidden>По заданным фильтрам ничего не найдено — попробуйте изменить условия.</p>
+        
+        <div class="pagination" id="pagination">
+          <a class="active">1</a>
+          <a>2</a>
+          <a>3</a>
+          <a>→</a>
+        </div>
+      </section>
+    </div>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>
+        <a href="index.html" class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span>
+        </a>
+        <p>© 2026 ООО «ПК-Мастер»<br>Все права не защищены.</p>
+      </div>
+      <div>
+        <h4>Информация</h4>
+        <a href="#">Доставка и оплата</a>
+        <a href="#">Гарантия</a>
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Пользовательское соглашение</a>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="tel:+79314196799">+7 (931) 419 67 99</a>
+        <a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a>
+        <span>Кызыл</span>
+        <span>Telegram | YouTube</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=3"></script>
+  <script src="js/catalog.js?v=3"></script>
+  <script src="js/reviews.js?v=3"></script>
+  <script src="js/auth.js?v=3"></script>
+</body>
+</html>

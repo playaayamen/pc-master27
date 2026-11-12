@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Отзывы — ПК-МАСТЕР</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/reviews.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span>
+    </a>
+    <div class="header-contacts">
+      <a href="tel:+79314196799">+7 (931) 419 67 99</a>
+      <a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="catalog.html">Каталог</a>
+      <a href="configurator.html">Конфигуратор</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="login.html" id="authLink">Вход</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Поиск">🔍</button>
+      <a href="cart.html" class="icon-btn cart-link" aria-label="Корзина">🛒<span class="badge" id="cartBadge">0</span></a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <p class="breadcrumbs"><a href="index.html">Главная</a> › <span>Отзывы</span></p>
+
+  <div class="rv-page-head">
+    <h1>Отзывы покупателей</h1>
+    <div class="rv-summary" id="rvPageStats"></div>
+  </div>
+
+  <div class="rv-toolbar">
+    <label>Товар
+    <select id="rvFilterProduct">
+      <option value="">Все товары</option>
+    </select>
+    </label>
+    <label>Сортировка
+    <select id="rvSort">
+      <option value="new">Сначала новые</option>
+      <option value="rating">По оценке</option>
+    </select>
+    </label>
+    <span class="spacer"></span>
+    <span id="rvPageCount" class="small"></span>
+  </div>
+
+<div class="rv-grid">
+  <div>
+    <div class="rv-list" id="rvPageList"><p class="rv-loading">Загрузка отзывов…</p></div>
+    <div class="rv-more" id="rvPageMore"></div>
+  </div>
+
+  <form class="rv-form" id="rvPageForm" novalidate>
+    <h3>Оставить отзыв</h3>
+    <label>Товар
+      <select name="product" required>
+        <option value="">— выберите товар —</option>
+      </select>
+    </label>
+    <label>Ваше имя
+      <input name="userName" maxlength="100" placeholder="Например, Алексей" required>
+    </label>
+    <label>Оценка</label>
+    <div class="rv-rate" data-rate>
+      <label title="1 из 5"><input type="radio" name="rating" value="1"><span>★</span></label>
+      <label title="2 из 5"><input type="radio" name="rating" value="2"><span>★</span></label>
+      <label title="3 из 5"><input type="radio" name="rating" value="3"><span>★</span></label>
+      <label title="4 из 5"><input type="radio" name="rating" value="4"><span>★</span></label>
+      <label title="5 из 5"><input type="radio" name="rating" value="5" checked><span>★</span></label>
+    </div>
+    <label>Отзыв
+      <textarea name="comment" maxlength="2000" placeholder="Что понравилось, что нет?" required></textarea>
+    </label>
+    <button class="btn btn-primary" type="submit">Отправить отзыв</button>
+    <p class="rv-msg" hidden></p>
+  </form>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div>
+      <a href="index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span></a>
+      <p>© 2026 ООО «ПК-Мастер»<br>Все права не защищены.</p>
+    </div>
+    <div><h4>Информация</h4><a href="#">Доставка и оплата</a><a href="#">Гарантия</a><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+    <div><h4>Контакты</h4><a href="tel:+79314196799">+7 (931) 419 67 99</a><a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a><span>Кызыл</span><span>Telegram | YouTube</span></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

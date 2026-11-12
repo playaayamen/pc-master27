@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Профиль — ПК-МАСТЕР</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/reviews.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-row">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span>
+    </a>
+    <div class="header-contacts">
+      <a href="tel:+79314196799">+7 (931) 419 67 99</a>
+      <a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="catalog.html">Каталог</a>
+      <a href="configurator.html">Конфигуратор</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="about.html">О компании</a>
+      <a href="contacts.html">Контакты</a>
+      <a href="login.html" id="authLink">Вход</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" aria-label="Поиск">🔍</button>
+      <a href="cart.html" class="icon-btn cart-link" aria-label="Корзина">🛒<span class="badge" id="cartBadge">0</span></a>
+      <button class="burger" id="burger" aria-label="Меню">☰</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <p class="breadcrumbs"><a href="index.html">Главная</a> › <span>Профиль</span></p>
+  <h1>Профиль</h1>
+
+  <div id="profileAuth" class="rv-form" style="max-width:520px;margin:20px 0">
+    <p>Вы не вошли в аккаунт.</p>
+    <p style="margin-top:12px"><a class="btn btn-primary" href="login.html">Войти</a> <a class="btn btn-outline" href="register.html" style="margin-left:8px">Регистрация</a></p>
+  </div>
+
+  <div id="profileContent" hidden>
+    <div class="rv-form" style="max-width:720px;margin:20px 0">
+    <h3>Данные пользователя</h3>
+    <div id="profileUser" style="line-height:1.8"></div>
+    <p style="margin-top:12px"><a href="cart.html" class="btn btn-primary">Перейти в корзину</a></p>
+    </div>
+
+  <div class="rv-form" style="max-width:720px;margin:20px 0">
+    <h3>Сохранённая корзина <span id="profileCartCount" class="small"></span></h3>
+    <div id="profileCart" class="rv-list" style="margin-top:12px"></div>
+    <div style="margin-top:12px;font-weight:700">Итого: <span id="profileCartTotal">0 ₽</span></div>
+  </div>
+
+  <div class="rv-form" style="max-width:720px;margin:20px 0">
+    <h3>Заказы</h3>
+    <div id="profileOrders" class="rv-list" style="margin-top:12px"></div>
+  </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <div>
+      <a href="index.html" class="logo"><span class="logo-icon">⚡</span><span class="logo-text"><b>ПК-МАСТЕР</b><small>СОБЕРИ СВОЮ МОЩНОСТЬ</small></span></a>
+      <p>© 2026 ООО «ПК-Мастер»<br>Все права не защищены.</p>
+    </div>
+    <div><h4>Информация</h4><a href="#">Доставка и оплата</a><a href="#">Гарантия</a><a href="#">Политика конфиденциальности</a><a href="#">Пользовательское соглашение</a></div>
+    <div><h4>Контакты</h4><a href="tel:+79314196799">+7 (931) 419 67 99</a><a href="mailto:info@pcmaster17.ru">info@pcmaster17.ru</a><span>Кызыл</span><span>Telegram | YouTube</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>
